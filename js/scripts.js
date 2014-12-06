@@ -67,7 +67,7 @@ $(function () {
 		function drawNavigation(){
 			var navigation = $('#navigation');
 
-			var home = $("<li class='active'><a href='#'><span>Home</span></a></li>");
+			var home = $("<li role='presentation' class='active'><a href='#'><span>Home</span></a></li>");
 			home.on('click',function () {
 				$('.active').removeAttr('class');
 				$(this).attr('class','active');
@@ -77,14 +77,14 @@ $(function () {
 
 			if(!document.cookie){
 
-				var login = $("<li><a href='#'><span>Login</span></a></li>");
+				var login = $("<li role='presentation'><a href='#'><span>Login</span></a></li>");
 				login.on('click',function () {
 					drawLoginForm();
 					$('.active').removeAttr('class');
 					$(this).attr('class','active');
 				})
 
-				var register = $("<li><a href='#'><span>Register</span></a></li>");
+				var register = $("<li role='presentation'><a href='#'><span>Register</span></a></li>");
 				register.on('click',function () {
 					drawRegisterForm();
 					$('.active').removeAttr('class');
@@ -94,7 +94,7 @@ $(function () {
 				navigation.append(login);
 				navigation.append(register);
 			}else{
-				var post = $("<li><a href='#'><span>Post</span></a></li>");
+				var post = $("<li role='presentation'><a href='#'><span>Post</span></a></li>");
 				post.on('click',function(){
 					drawPost();
 					$('.active').removeAttr('class');
@@ -102,7 +102,7 @@ $(function () {
 				});
 				navigation.append(post);
 
-				var profile = $("<li><a href='#'><span>Profile</span></a></li>");
+				var profile = $("<li role='presentation'><a href='#'><span>Profile</span></a></li>");
 				profile.on('click',function(){
 					drawProfile();
 					$('.active').removeAttr('class');
@@ -110,7 +110,7 @@ $(function () {
 				});
 				navigation.append(profile);
 
-				var logout = $("<li><a href='#' class='logout'><span>Logout</span></a></li>");
+				var logout = $("<li role='presentation'><a href='#' class='logout'><span>Logout</span></a></li>");
 				logout.on('click',function(){
 					logOut();
 				});
