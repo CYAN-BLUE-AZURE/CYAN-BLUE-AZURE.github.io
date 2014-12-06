@@ -1,6 +1,6 @@
 (function() {
     $(function() {
-		var button = $('.search-form button');
+		var button = $('.navbar-form button');
 		
 		button.click(function(){
 			var searchValue = $('#search').val();
